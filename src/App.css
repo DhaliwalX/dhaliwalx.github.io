@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
+
+.App {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.letters {
+  vertical-align: middle;
+  display: block;
+  width: 100%;
+  font-family: 'Julius Sans One';
+  font-size: 5em;
+  color: #444;
+}
+.letter {
+  display: inline-block;
+}
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
