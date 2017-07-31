@@ -1,5 +1,17 @@
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
+  background-color: #DFDFDF;
   font-family: sans-serif;
+}
+
+#root {
+  height: calc(100% - 20px);
+  border: 10px solid white;
+  background-color: #f3f3f3;
 }
