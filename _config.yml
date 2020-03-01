@@ -1,9 +1,9 @@
 # Setup
 title: DhaliwalX
 tagline: Personal blog by Pushpinder Singh Dhaliwal
-url: https://dhaliwalx.dev
+url: https://www.dhaliwalx.dev
 paginate: 1
-baseurl: "https://dhaliwalx.dev"
+baseurl: "https://www.dhaliwalx.dev"
 permalink: :title/
 
 kramdown:
@@ -38,7 +38,7 @@ ga_analytics: UA-92218586-1
 # Specify the author for blog posts
 author:
   name: Pushpinder Singh
-  url: https://dhaliwalx.dev
+  url: https://www.dhaliwalx.dev
 
 # Custom vars
 version: 1.3.0
