@@ -3,7 +3,7 @@ title: DhaliwalX
 tagline: Personal blog by Pushpinder Singh Dhaliwal
 url: https://www.dhaliwalx.dev
 paginate: 1
-baseurl: "https://www.dhaliwalx.dev"
+baseurl: ""
 permalink: :title/
 
 kramdown:
@@ -42,5 +42,4 @@ author:
 
 # Custom vars
 version: 1.3.0
-github:
-  repo: https://github.com/princedhaliwal
+github: [metadata]
