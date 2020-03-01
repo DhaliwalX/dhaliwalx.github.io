@@ -18,11 +18,16 @@
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       extensions: [
+        "tex2jax.js",
         "MathMenu.js",
         "MathZoom.js",
         "AssistiveMML.js",
         "a11y/accessibility-menu.js"
       ],
+      tex2jax: {
+        inlineMath: [['$', '$']],
+        displayMath: [['$$', '$$']]
+      },
       jax: ["input/TeX", "output/CommonHTML"],
       TeX: {
         extensions: [
