@@ -3,7 +3,7 @@ title: DhaliwalX
 tagline: Personal blog by Pushpinder Singh Dhaliwal
 url: https://dhaliwalx.dev
 paginate: 1
-baseurl: ""
+baseurl: "https://dhaliwalx.dev"
 permalink: :title/
 
 kramdown:
