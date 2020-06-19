@@ -153,7 +153,7 @@
           let number = document.querySelector(`input[type="phone"]`).value;
           if (number) {
               if (!number.startsWith("+91") || !number.startsWith("0")) {
-                  number = "0" + number;
+                  number = "+91" + number;
               }
               const url = `https://api.whatsapp.com/send?phone=${number}&text=`;
               window.open(url);
