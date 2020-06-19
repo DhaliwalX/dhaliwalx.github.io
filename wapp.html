@@ -8,6 +8,7 @@
     <style>
       html, body {
           margin: 0;
+          font-size: 1.3em;
           font-family: sans-serif;
           color: #404040;
       }
@@ -139,7 +140,7 @@
 
       <p>
         <small>
-          Utility to open unknown number directly into chat window without saving.
+          Utility to open unknown number directly into chat window without saving. Don't use it as I might be saving numbers on my server.
         </small>
       </p>
       </div>
@@ -149,9 +150,11 @@
       
       function submit(e) {
           e.preventDefault();
-          const number = document.querySelector(`input[type="phone"]`).value;
-          console.log('called');
+          let number = document.querySelector(`input[type="phone"]`).value;
           if (number) {
+              if (!number.startsWith("+91") || !number.startsWith("0")) {
+                  number = "0" + number;
+              }
               const url = `https://api.whatsapp.com/send?phone=${number}&text=`;
               window.open(url);
               return true;
@@ -162,4 +165,4 @@
       document.querySelector('form').addEventListener('submit', submit);
       </script>
     </body>
-p  </html>
+  </html>
