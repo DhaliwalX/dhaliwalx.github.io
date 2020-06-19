@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Open Whatsapp</title>
+    <style>
+      html, body {
+          margin: 0;
+          font-family: sans-serif;
+          color: #404040;
+      }
+      body {
+          height: 100vh;
+          width: 100%;
+      }
+
+      #app {
+          display: flex;
+          align-items: center;
+          vertical-align: middle;
+          width: 100%;
+          height: 100%;
+      }
+
+      form {
+          margin: auto;
+          display: flex;
+          flex-direction: column;
+      }
+          
+      .input {
+          padding: 0 0 1em 0;
+      }
+      label {
+          font-size: 0.6em;
+          display: block;
+          padding: 0 0 0.4em 0;
+      }
+      *, *:before, *:after {
+          box-sizing: border-box;
+      }
+      input {
+          margin: unset;
+          box-sizing: border-box;
+      }
+
+      input[type="phone"] {
+          padding: 0.8em;
+          max-width: 200px;
+          border: 1.2px solid #404040;
+          border-radius: 3px;
+      }
+
+      input[type="phone"]:active {
+          padding: 0.5em;
+          max-width: 200px;
+          border: 1.2px solid #404040;
+          border-radius: 3px;
+          box-shadow: 0 1px 5px 0px rgba(0,0,0,0.4);
+          outline: none;
+      }
+      input[type="phone"]:focus {
+          padding: 0.8em;
+          max-width: 200px;
+          outline: none;
+          border: 1.2px solid #404040;
+          border-radius: 3px;
+          box-shadow: 0 1px 5px 0px rgba(0,0,0,0.4);
+      }
+      input[type="submit"] {
+          padding: 0.8em 0.5em;
+          max-width: 200px;
+          width: 100%;
+          text-decoration: none;
+          border: 1.2px solid #404040;
+          border-radius: 3px;
+          outline: none;
+          background-color: #404040;
+          color: #f0f0f0;
+          cursor: pointer;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          box-shadow: 0 1px 5px 0px rgba(0,0,0,0.4);
+      }
+      input[type="submit"]:active {
+          box-shadow: 0 2px 5px 0px rgba(0,0,0,0.4);
+          background-color: white;
+          color: #404040;
+      }
+      input[type="submit"]:hover {
+          box-shadow: 0 2px 5px 0px rgba(0,0,0,0.4);
+          background-color: white;
+          color: #404040;
+      }
+
+      small {
+          font-size: 0.6em;
+      }
+      .inner {
+          display: block;
+          margin: auto;
+          text-align: center;
+      }
+
+      @media (prefers-color-scheme:dark) {
+          body {
+              background-color: black;
+              color: lightgray;
+          }
+
+          input[type="submit"] {
+              background-color: lightgray;
+              color: black;
+          }
+      }
+      </style>
+    </head>
+  <body>
+    <div id="app">
+      <div class="inner">
+      <form onsubmit="submit()" autocomplete="off">
+        <div class="input">
+          <label for="phone">Enter Phone No.</label>
+          <input type="phone" name="phone" />
+        </div>
+        <div class="input">
+          <input type="submit" value="Open" />
+          </div>
+      </form>
+
+      <p>
+        <small>
+          Utility to open unknown number directly into chat window without saving.
+        </small>
+      </p>
+      </div>
+    </div>
+
+    <script>
+      
+      function submit(e) {
+          e.preventDefault();
+          const number = document.querySelector(`input[type="phone"]`).value;
+          console.log('called');
+          if (number) {
+              const url = `https://api.whatsapp.com/send?phone=${number}&text=`;
+              window.open(url);
+              return true;
+          }
+          return false;
+      }
+
+      document.querySelector('form').addEventListener('submit', submit);
+      </script>
+    </body>
+  </html>
